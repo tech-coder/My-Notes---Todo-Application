@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+     height: 100%;
+     display: flex;
+    flex-direction: column;
+    box-sizing: border-box; }
+.content {
+    flex: 1 0 auto;
+    padding :20%;
+    margin-top: auto 
+  };
+  .footer {
+    flex-shrink: 0;
+    background-color:#dcd6f7 ;
+    bottom: 0%;
+    text-align: center;
+  }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,29 @@
+<mat-card class="back">
+    <mat-grid-list cols=4 rowHeight="100px">
+     
+            <mat-grid-tile colspan=2 rowspan=1>
+                <mat-card-title>To Be Done</mat-card-title>
+            </mat-grid-tile>
+            <mat-grid-tile colspan=2 rowspan=1>
+                <mat-card-actions>
+                    <button mat-button mat-icon-button btn (click)="addNewTodo()">
+                        <mat-icon class="material-icons">add_circle</mat-icon>
+    
+                    </button>
+                </mat-card-actions>
+            </mat-grid-tile>
+                 
+    </mat-grid-list>
+
+                    <mat-card-content  *ngIf="todoList.length>0">
+
+                            <mat-selection-list  #todo  (selectionChange)='somethingChange($event)'>
+                           
+                                    <mat-list-option class="todos" *ngFor="let todos of todoList" selected=false value={{todos}}>
+                                            {{todos}}
+                                        </mat-list-option>
+                               
+                            </mat-selection-list>
+                        </mat-card-content>
+
+    </mat-card>
